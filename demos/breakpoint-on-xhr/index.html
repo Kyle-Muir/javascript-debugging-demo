@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>FHF Demos</title>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="breakpoints-on-xhr.js"></script>
+</head>
+<body>
+	<h1>Breakpoints on XHR | <a href="..\index.html">Back</a></h1>
+	<p>
+		Breakpoints on XHR is a useful way of simply making Chrome stop when a web request is made to a web api or similar.
+	</p>
+	<p>
+		XHR breakpoints are conditional by default which is extremely useful if you have a large application and don't want to step through controller -> service -> whatever -> XHR request. You can simply say "break when the URL contains 'blah'".
+	</p>
+	<p>
+		You can make XHR breakpoints catch all XHR requests by specifying no url to match on.
+	</p>
+	<p>
+		Breakpoint by XHR does have some gotchas - for example, with jQuery it lands you in the jQuery function that makes XHR requests rather than your custom logic. Unfortunately, not even <a href="../blackbox-scripts/index.html">blackboxing</a> scripts like jQuery affects this behaviour. However, that's what the stack trace is for.
+	</p>
+	<p>
+		Example stack trace:
+	</p>
+	<p>
+		<img src="../images/breakpoint-on-xhr-stacktrace.png" alt="stacktrace for breakpointing on XHR" />
+	</p>
+	<p>
+		Highlighted is the actual method call where the xhr request was made and quickly showing that I had <i>Any XHR</i> requests captured.
+	</p>
+	<p>
+		<button id="goBabyGo">Show me!</button>
+	</p>
+</body>
+</html>

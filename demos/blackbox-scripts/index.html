@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>FHF Demos</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="blackbox-scripts.js"></script>
+</head>
+
+<body>
+    <h1>Blackbox Scripts | <a href="..\index.html">Back</a></h1>
+    <p>
+        Blackbox scripts in Chrome are useful as they ignore the blackboxed scripts and do not debug into them, so stepping in won't jump you through to some third party (and oft minified) script.
+    </p>
+    <p>
+        For example, a common way to iterate over a list of items is to use jQuery's (or lodash if you're not a heathen) <i>$.each</i>. Ordinarily, if you press F11 to step into $.each, it takes you to jQuery's function. If black boxed, it will step directly into your function - which 99 times out of 100 is probably what you want to do.
+    </p>
+    <p>
+        A common gotcha for me is minified versions vs original versions. When I add <i>/jquery\.js$</i> I often forget that it will not stop <i>jquery.min.js</i> from stepping in to their functions. I imagine an update for that will come out eventually.
+    </p>
+    <p>
+        <button id="goBabyGo">Show me!</button>
+    </p>
+</body>
+
+</html>
