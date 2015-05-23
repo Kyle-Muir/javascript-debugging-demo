@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace JavaScriptDebuggingDemoWebApi.Controllers
 {
@@ -8,13 +7,12 @@ namespace JavaScriptDebuggingDemoWebApi.Controllers
         // GET api/echo
         public string Get()
         {
-            return "Echo";
+            return "Echo... echo.... echo";
         }
-
-        // GET api/echo/5
-        public string Get(int idToEcho)
+        // GET api/echo/hello world
+        public string Get(string message)
         {
-            return idToEcho.ToString(CultureInfo.CurrentCulture);
+            return message;
         }
     }
 }
