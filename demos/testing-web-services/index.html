@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>FHF Demos</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Testing Web Services | <a href="..\index.html">Back</a></h1>
+    <p>
+        Often when I am working on projects I will spend a considerable amount of time "mucking" around in the console, seeing what various web services return, whether it returns what I want, how I can structure my call and so forth. Often these hen scratchings will be lifted and shifted into the code I use and reworked to do what I expect.
+    </p>
+    <p>
+        With jQuery this is extremely easy, I simply type $.get(), $.post, $.ajax or similar into the console and start manipulating it until I'm happy with the result set. I found that this approach worked extremely well when using product web services (for example, SharePoint search service) as products tend to provide you large amounts of kruft you aren't interested in. For the SharePoint Search Service example it returns search rankings, last modified time, created date, metadata fields (title, id, so forth), unique identifier, url, server relative url and so forth. For the most part, you're interested in your custom metadata fields so you can cut straight to the chase. Discovering that "cutting straight to the chase" was actually <i>response.d.query.PrimaryQueryResult.RelevantResults.Table.Rows.results</i>.
+    </p>
+    <p>
+        Yes, the word <b>result</b> was in the response 3 times.
+    </p>
+    <p>
+        With AngularJS this is slightly more complicated, but not by much. I tend to add a breakpoint inside a controller or more likely service that references $http, bind a click event or something else that's easy to trigger and go from there.
+    </p>
+    <p>
+        Complete aside, while on an Ajax related note. Internet Explorer caches all Ajax requests to the same endpoint - for example, <i>/api/jobs/1</i> would always return you the same result even if the result had changed. Be sure when working with Ajax\IE to <b>disable the ajax cache</b>. This is easily achieved for both AngularJS\jQuery. It will get you every time.
+    </p>
+    <p>
+        Demo code, paste into the console: $.get('http://localhost:53173/api/largedataset').success(function(result){console.log(result);});
+    </p>
+</body>
+
+</html>
