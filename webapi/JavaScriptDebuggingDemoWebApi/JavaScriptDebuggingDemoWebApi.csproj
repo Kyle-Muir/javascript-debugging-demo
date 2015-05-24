@@ -117,7 +117,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LargeDataSetController.cs" />
     <Compile Include="Controllers\EchoController.cs" />
+    <Compile Include="Domain\Builder\Constants.cs" />
+    <Compile Include="Domain\Builder\ExampleDataBuilder.cs" />
+    <Compile Include="Domain\Builder\SettingsBuilder.cs" />
+    <Compile Include="Domain\ExampleData.cs" />
+    <Compile Include="Domain\FakeDataCatalogue.cs" />
+    <Compile Include="Domain\Setting.cs" />
+    <Compile Include="Domain\StringGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
