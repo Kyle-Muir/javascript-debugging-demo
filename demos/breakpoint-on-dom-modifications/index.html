@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>FHF Demos</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="breakpoints-on-dom-modifications.js"></script>
+</head>
+
+<body>
+    <h1>Breakpoints on DOM modifications | <a href="..\index.html">Back</a></h1>
+    <p>
+        Breakpoints on DOM modifications is a useful way of simply making Chrome breakpoint when a dom modification happens. This is useful when attempting to track down what code is triggering what changes to your page - especially on products when you don't necessarily have control over all code running in the page.
+    </p>
+    <p>
+        Once again, it often lands you in the library which is modifying the DOM (even if it's <a href="../blackbox-scripts/index.html">blackboxed</a>). The stacktrace is your friend.
+    </p>
+    <p>
+        <img src="../images/breakpoint-on-dom-modification.png" alt="stacktrace for breakpointing on DOM modifications" />
+    </p>
+    <p>
+    	To run the following demo, add a subtree modification breakpoint on the p tag containing the button and click "Show me!". You can add a subtree modification breakpoint like this:
+    </p>
+    <p>
+    	<img src="../images/subtree-modification-breakpoint.png" alt="how to add a subtree modification breakpoint" />
+    </p>
+    <p id="domModificationDemo">
+        <button id="goBabyGo">Show me!</button>
+    </p>
+</body>
+
+</html>
