@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>FHF Demos</title>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="dynamic-scripts.js"></script>
+</head>
+<body>
+	<h1>Breakpoints in Dynamic JavaScript | <a href="..\index.html">Back</a></h1>
+	<p>
+		Adding Source URLs is a clever way of ensuring you can put breakpoints in dynamic scripts. If you look at the current source of this page "dynamic-script-with-source-url.js" is not present. Nor is "dynamic-script-no-source-url.js". Clicking the button below will dynamically load them into the page. They still will not show under the source. However, if you add a source URL they will show up under a specialised category called "no domain".
+	</p>
+	<p>
+		<img src="../images/breakpoints-in-dynamic-javascript.png" alt="stacktrace for breakpointing on XHR" />
+	</p>
+	<p>
+		<button id="goBabyGo">Show me!</button>
+	</p>
+</body>
+</html>
