@@ -132,6 +132,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\dynamic-script-no-source-url.js" />
+    <Content Include="Content\dynamic-script-with-source-url.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
